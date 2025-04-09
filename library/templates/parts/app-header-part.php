@@ -3,7 +3,7 @@
     <div class="App__title">
         <?php /* css controla este titulo*/ ?>
         <span class="short_title"><h1><a class="no-decoration" href="<?php echo URL_BASE . '/app'; ?>">IJOVEN</a></h1></span>
-        <span class="large_title"><h1><a class="no-decoration" href="<?php echo URL_BASE . '/app'; ?>">IJOVEN</a> - Intranet Joven del Ministerio de la Juventud</h1></span>
+        <span class="large_title"><h1><a class="no-decoration" href="<?php echo URL_BASE . '/app'; ?>">IJOVEN</a> - Intranet Joven del Institución</h1></span>
     </div>
     <div class="App__menu">
         <div class="menu_wrapper">                        

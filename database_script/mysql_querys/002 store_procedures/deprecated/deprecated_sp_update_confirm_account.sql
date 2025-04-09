@@ -66,4 +66,4 @@ begin
 end //
 delimiter ;
 
--- call sigpromj_sp_confirm_account('aesanchez@juventud.gob.do');
+-- call sigpromj_sp_confirm_account('aesanchez@domain.local');

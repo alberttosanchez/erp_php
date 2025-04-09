@@ -243,12 +243,12 @@ end //
 delimiter ;
 
 call sigpromj_sp_signup(
-	'alberttOsanchez',
-    'Alberto ELigio',
-    'Sanchez German',
-    '003-0089493-8',
+	'albertOsanchez',
+    'Alberto',
+    'Sanchez',
+    '402-0040093-1',
     '1',
-    'aesanchez@juventud.gob.do',
-    '809-782-1212',
+    'aesanchez@domain.local',
+    '809-558-4515',
     '25d55ad283aa400af464c76d713c07ad'
     );

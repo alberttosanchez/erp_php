@@ -342,4 +342,4 @@ begin
 end //
 delimiter ;
 
-call ijoven_sp_insert_log('albettosanchez','aesanchez@juventud.gob.do','123456','$1-f651ef14werf74rg46rfg4er7ere7r');
+call ijoven_sp_insert_log('albertosanchez','sanchez@domain.local','123456','$1-f651ef14werf74rg46rfg4er7ere7r');

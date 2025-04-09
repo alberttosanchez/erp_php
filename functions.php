@@ -210,7 +210,7 @@
 
         if ( count($array) > 0 ) 
         {
-            $path_mod_name = $array[$indexPosition]; // becas-juventud
+            $path_mod_name = $array[$indexPosition]; 
 
             $dir_and_files = glob( $_SERVER['DOCUMENT_ROOT'] . MODULE_PATH . "*" );
             

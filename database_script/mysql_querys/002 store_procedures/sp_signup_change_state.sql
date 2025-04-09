@@ -335,12 +335,12 @@ delimiter ;
 /*
 call ijoven_sp_signup(
 	'alberto.sanchez',
-    'Alberto ELigio',
-    'Sanchez German',
-    '003-0089493-8',
+    'Alberto',
+    'Sanchez',
+    '402-0058185-7',
     '1',
-    'alberto.sanchez@juventud.gob.do',
-    '809-782-1212',
+    'albertosanchez@domain.local',
+    '809-558-1121',
     '$2y$10$Ji3qD4q69SPywZlROXZkG.F7IDfUIAd72rafUbBNfwWIwVdS2lmbq'
     );
 */

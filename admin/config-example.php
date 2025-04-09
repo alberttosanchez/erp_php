@@ -143,7 +143,7 @@
     define('DB_CONFIG', $dbConfig );
 
     // correo del equipo de soporte
-    define('EMAIL_TO_STAFF','webmaster@juventud.gob.do');
+    define('EMAIL_TO_STAFF','webmaster@domain.local');
 
     // obtiene el nombre del dominio actual
     $port = HTTP_PROTOCOL;

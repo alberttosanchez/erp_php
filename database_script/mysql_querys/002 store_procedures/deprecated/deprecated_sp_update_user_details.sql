@@ -242,4 +242,4 @@ begin
 end //
 delimiter ;
 
--- call sigpromj_sp_update_user_details(1,'CARLOS2','perez','005-4567895-5','aesanchez@juventud.gob.do',3,'25-12-2020');
+-- call sigpromj_sp_update_user_details(1,'CARLOS2','perez','005-4567895-5','aesanchez@domain.local',3,'25-12-2020');

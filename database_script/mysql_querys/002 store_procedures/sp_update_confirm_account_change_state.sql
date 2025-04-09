@@ -70,4 +70,4 @@ begin
 end //
 delimiter ;
 
--- call ijoven_sp_confirm_account('aesanchez@juventud.gob.do');
+-- call ijoven_sp_confirm_account('aesanchez@domain.local');
