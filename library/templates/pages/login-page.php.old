@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="<?php echo LANG; ?>">
+<head>
+    <?php require_once(META_TAGS); ?>
+    <script src="<?php echo SCRIPTS_DIRECTORY.'/login-page.js';?>"></script>    
+    <link rel="stylesheet" href="<?php echo ASSETS_DIRECTORY.'css/page-recovery-style.css';?>">        
+    <title><?php echo APP_NAME; ?> - Login</title>    
+</head>
+<body>
+    
+    <div id="Main__wrapper" class="Main__wrapper">
+        <div class="Main__page">
+            <div class="Login__wrapper">                           
+                <div class="Login__box">
+                    <div class="Login__header">
+                        <div class="Logo__imgBox mj-logo"><img src="<?php echo ASSETS_DIRECTORY.'images/mj-logo2-400x217.png';?>" alt="mj-logo"/></div>
+                        <div class="Logo__imgBox ijoven-logo"><img src="<?php echo ASSETS_DIRECTORY.'images/ijoven-logo-slogan.png';?>" alt="ijoven-logo"/></div>
+                    </div>   
+                    <div class="Login__container">                            
+
+                        <?php if ( is_home() || is_path('login') ) : ?>
+
+                            <?php include_once('./library/templates/parts/login-part.php') ?>
+
+                        <?php elseif ( is_path('recovery') ) : ?>
+
+                            <?php include_once('./library/templates/parts/recovery-part.php') ?>
+
+                        <?php endif; ?>          
+
+                    </div>
+                </div>                     
+                <div id="message-box" class="message-box"></div> 
+            </div>      
+        </div> 
+    </div>   
+    
+    <?php include_once('./library/templates/parts/loading-part.php') ?>
+
+</body>
+</html>

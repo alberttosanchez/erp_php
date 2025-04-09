@@ -1,0 +1,13 @@
+.top_sidebar_wrap > h2{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    height: 34px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.menu-list{
+    min-width: 200px;
+}

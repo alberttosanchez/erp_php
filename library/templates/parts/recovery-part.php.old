@@ -1,0 +1,139 @@
+<script>
+    
+    this.state = {
+        ...this.state,
+        form: {
+            LoginRestore__email: "",
+        }
+    };
+    
+    cleanRecoveryForm = () => {
+        let LoginRestore__email = document.getElementById('LoginRestore__email');
+
+        if ( LoginRestore__email !== null) {
+            LoginRestore__email.value = "";
+        }
+
+    }
+
+    sendMailForRestorePassword = async () =>     
+    {   
+        // carga el loading...     
+        this.loading();
+
+        try
+        {    
+            const server = await fetch( API_RESTORE_PASSWORD_URL ,{
+                method: "POST",
+                headers: {                                
+                    'Content-Type': 'application/json'       
+                },
+                body: JSON.stringify({
+                    user_email: this.state.form.LoginRestore__email,                     
+                })                                          
+            });
+
+            const response = await server.json();
+
+            //console.log(response);
+            
+            this.loading();
+
+            if(server.status === 200 || server.status === 401)
+            {                
+                this.loginValidationMessage("Si los datos son correctos recibirá un correo electronico con las instrucciones de recuperación.","recovery");
+                this.cleanRecoveryForm();
+            }            
+            else if (server.status === 409)
+            {
+                this.loginValidationMessage(response.message,"recovery");
+            }
+            else
+            {
+                this.loginValidationMessage("El servicio no esta disponible intente mas tarde.","recovery");
+            }
+            
+            this.state = {
+                ...this.state,
+                form:{
+                    LoginRestore__email: "",
+                }
+            };
+        }
+        catch (error)
+        {
+            //console.log(Object.getOwnPropertyNames(error));
+            console.log(error.message);
+            this.loading();
+
+            if (error.message === "Failed to fetch")
+            {
+                this.loginValidationMessage("No se pudo conectar al servidor. Contacte a su administrador de sistemas.","recovery");
+            }
+            else
+            {
+                this.loginValidationMessage("El servicio no esta disponible en este momento. Contacte a su administrador de sistemas.","recovery");
+            }
+        }
+    }
+
+    handleRecoveryClick = () => 
+    { 
+        
+        if(
+            this.state.form.LoginRestore__email !== null && 
+            this.state.form.LoginRestore__email !== "" && 
+            this.state.form.LoginRestore__email.length > 2 &&
+            /^[a-zA-Z0-9\.]+@+[a-zA-Z0-9]+.+[A-z]/i.test(this.state.form.LoginRestore__email)
+        )
+        {
+            this.sendMailForRestorePassword();
+        }
+        else
+        {
+            this.loginValidationMessage("Escriba un correo electronico válido.","warning");
+        }        
+    }
+
+    handleRecoveryChange = (e) =>
+    {
+        
+        this.state ={
+            ...this.state,
+            form: {
+                ...this.state.form,
+                [e.name]: e.value
+            }            
+        };
+    }
+
+    handleRecoverySubmit = () =>
+    {        
+        return false;
+    }
+</script>
+<div class="LoginRecovery__box">                     
+    <div class="LoginRecovery__title">
+        <h1>RECUPERAR CONTRASEÑA</h1>
+    </div>                                        
+    <form onsubmit="return handleRecoverySubmit()" class="LoginRecovery__body LoginRecovery__form" action="" method="post">
+        <label class="LoginRecovery__formUserInput" for="LoginRestore__email">
+            <span class="icon-user"><i class="fa fa-user"></i></span>
+            <input 
+                onkeyup="handleRecoveryChange(this)" 
+                onchange="handleRecoveryChange(this)"
+                class="form-control" 
+                type="text" 
+                id="LoginRestore__email" 
+                name="LoginRestore__email" 
+                value="" 
+                placeholder="Ingrese su Correo Electrónico" 
+                maxlength="50"
+            />
+        </label>                    
+        <button onclick="handleRecoveryClick(this)" class="btn btn-secondary" type="button">Recuperar</button>                                                    
+    </form>                                                                    
+    <div class="LoginRecovery__footer">
+        <p><a href="<?php echo URL_BASE.'/login'; ?>">Iniciar Sesión</Link></p>
+    </div>          
+</div>   

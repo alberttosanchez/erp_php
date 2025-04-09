@@ -1,0 +1,61 @@
+.body__wrapper{
+    display: flex;
+    height: calc(100vh - 27px);
+    /* overflow: hidden; */
+}
+
+.MenuLeftSidebar__wrapper{
+    width: 100%;
+    max-width: 20%;
+    background-color: #5892d8;
+    min-height: calc(100vh - 26px);
+    transition: 0.5s;
+    min-width: 200px;
+    box-shadow: 3px 0px 4px 0px #656060;
+    z-index: 0;
+    height: auto;
+    overflow: hidden;
+}
+.MenuRightSidebar__wrapper{
+    width: 100%;
+    background-color: #fffffffa;
+    display: block;
+    padding: 20px;
+    /* height: fit-content; */
+    overflow: auto;
+}
+
+.MenuLeftSidebar__wrapper.contract{
+    max-width: 60px;
+    transition: 0.5s;
+    overflow: hidden;
+    min-width: 0;
+    height: auto;
+}
+
+.MenuLeftSidebar__wrapper .f-icon{
+    color: white;
+    padding: 18px;
+    font-size: 21px;
+    text-align: center;
+    width: 57px;
+    display: inline-block;
+    margin: 0;
+}
+
+.MenuLeftSidebar__wrapper .menu-list > li{
+    /* display: flex; */
+    /* align-items: end; */
+    /* flex-direction: column; */
+    width: calc(100% - 5px);
+}
+
+.MenuLeftSidebar__wrapper .menu-list > li > span {
+    margin: 0 5px;
+}
+.MenuLeftSidebar__wrapper .menu-list > li > button{
+    border: unset;
+    background: unset;
+    color: white;
+    font-weight: bold;
+}

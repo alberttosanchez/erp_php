@@ -1,0 +1,80 @@
+.profileAvatar_wrapper{
+    width: 100%;
+    max-width: 300px;
+}
+
+.avatar_box {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #aaa;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+}
+
+.avatar_profile_icon > svg {
+    width: 100% !important;
+    height: 100%;
+    padding: 20px;
+    color: #aaa;
+}
+
+.spinner_box {
+    position: absolute;
+    background-color: #fffffff0;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    /* top: -303px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner_box .spinner-border{
+    font-size: initial;
+}
+.remove_avatar_btn {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: unset;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 40px !important;
+}
+
+.profileAvatar_formWrapper{    
+    width: 100%;
+    max-width: 300px;    
+}
+
+input[type="file"].avatar_file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+label[for="avatar_file"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #106BA0;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px !important;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+label[for="avatar_file"]:hover{
+    opacity: 0.8;
+}

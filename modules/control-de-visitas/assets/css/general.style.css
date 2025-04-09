@@ -1,0 +1,91 @@
+.cv_general_content label {
+    font-size: 12px;
+    font-weight: bold;
+}
+.gral_info_box_one_group {
+    display: flex;
+    justify-content: space-between;
+}
+.gral_info_box_one_group > div {
+    width: 100%;        
+}
+.gral_info_box_one_group > div:nth-child(1) {
+    max-width: calc(80% - 5px);
+}
+.gral_info_box_one_group > div:nth-child(2) {
+    max-width: calc(20% - 5px);
+}
+.gral_info_box_three_group {
+    display: flex;
+    justify-content: space-between;
+}
+.gral_info_box_three_group > div {
+    width: 100%;
+}
+.gral_info_box_three_group > div {
+    max-width: calc(35% - 5px);
+}
+.gral_info_box_three_group > div:nth-child(3) {
+    max-width: calc(30% - 5px);
+}
+.gral_info_save_btn_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+span.switch_btn {
+    display: block;
+    width: 39px;
+    height: 21px;
+    border: 2px solid #a1a1a5;
+    border-radius: 12px;
+    position: relative;
+    background-color: #e1d7d7;
+    cursor: pointer;
+}
+span.switch_btn::after {
+    content: " ";
+    width: 18px;
+    height: 18px;
+    background-color: #616478;
+    border: 1px solid #9b9b86;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;                        
+    transition: 0.3s;
+}
+span.switch_btn.selected {                        
+    border: 2px solid #7cbf48;
+    background-color: #aadba0;
+}
+span.switch_btn.selected::after {                                                
+    background-color: #47993c;
+    border: 1px solid #d7d75b; 
+    left: unset;                                             
+    right: 0 !important;
+    transition: 0.3s;
+}
+
+.gral_check_element_box{
+    display: flex;
+    align-items: center;
+}
+.gral_check_element_box > span{
+    padding: 6px;
+}
+@media screen and (max-width: 769px)
+{
+    .gral_info_box_one_group,
+    .gral_info_box_three_group {
+        flex-direction: column;
+    }
+    .gral_info_box_one_group > div,
+    .gral_info_box_three_group > div {
+        max-width: 100% !important;
+        
+    }
+    .gral_info_save_btn_box {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,148 @@
+.left_sidebar.contract{
+    max-width: 60px;
+    transition: 0.5s;
+    overflow: hidden;
+    min-width: 60px;
+    height: auto;        
+}
+
+.left_sidebar{
+    width: 100%;
+    max-width: 250px;
+    background-color: #ececec;
+    min-height: calc(100vh - 26px);
+    transition: 0.5s;
+    min-width: 220px;    
+    border-right: 3px solid #ececec;
+    z-index: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.left_sidebar .top_sidebar_wrap{
+}
+
+.left_sidebar .top_sidebar_wrap > h2 {
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    height: 34px;
+    overflow: hidden;
+    color: #464646;
+}
+
+.left_sidebar .top_sidebar_wrap > .expand_or_close_button {
+    padding: 0px 10px;
+    font-size: 27px;
+    border: unset;
+    background-color: unset;
+    color: #464646;
+}
+
+.left_sidebar .menu-list > li{
+    position: relative;
+    padding: 6px 0;
+}
+
+.left_sidebar .f-icon{
+    color: #464646;
+    padding: 12px;
+    font-size: 18px;
+    text-align: center;
+    width: 57px;
+    display: inline-block;
+    margin: 0;    
+}
+
+.left_sidebar .menu-list > li{
+    /* display: flex; */
+    /* align-items: end; */
+    /* flex-direction: column; */        
+}
+
+.left_sidebar .menu-list > li > span {
+    margin: 0 5px;
+}
+
+.left_sidebar .menu-list > li > button,
+.left_sidebar .menu-list > li > a,
+.left_sidebar .sub-menu-list li > button,
+.left_sidebar .sub-menu-list li > a {
+    border: unset;
+    background: unset;
+    color: #181818;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.left_sidebar .menu-list > li > a:hover,
+.left_sidebar .sub-menu-list li > a:hover {    
+    color: #1f4ffe;    
+}
+
+
+.rotate:before{
+    transform: rotate(-45deg) !important;
+}
+
+.left_sidebar .menu-list > li.has_children:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    border-left: 1px solid #464646;
+    border-bottom: 1px solid #464646;
+    right: 5px;
+    top: 30px;
+    transition: 0.3s;        
+}
+
+.left_sidebar .sub-menu-list{
+    position: relative;
+}
+
+.left_sidebar .sub-menu-list > div{
+    overflow: hidden;   
+}
+
+.left_sidebar .sub-menu-list li{
+    padding: 6px 0 6px 22px;
+}
+
+.left_sidebar .sub-menu-list button{
+    border: unset;
+    background-color: unset;
+    color: #464646;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sub-menu-wrap{
+    transition: 0.5s;
+}
+
+.contract{
+    height: 0;
+    transition: 0.5s;
+}
+
+.sidebar_anchor{
+    text-decoration: none;
+}
+
+.module_sidebar .menu_icon{
+    padding: 20px;
+    font-size: 18px;
+}
+
+.module_sidebar .sub_menu_icon {
+    padding-right: 24px;
+}
+
+.module_sidebar .selected {
+    background-color: #7ea7e6;
+}

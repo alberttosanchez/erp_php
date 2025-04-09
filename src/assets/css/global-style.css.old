@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('./../images/ijoven-background3.png');
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-show {
+    display: none !important;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: white;
+}
+.no-decoration:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.cursor {
+    cursor: not-allowed !important;
+}
+
+.dispel {
+    transition: 500ms;
+    animation-name: dispel;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes dispel {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/*----------------------- Session Message ----------------------------|
+|--------------------------------------------------------------------*/
+
+.warning_session_message_box{
+
+display: flex;
+
+position: absolute;
+
+justify-content: center;
+
+align-items: center;
+
+width: 100%;
+
+height: 100%;
+
+background-color: #c2c2c280;
+
+z-index: 1000;
+
+top: 0;
+}
+
+.warning_session_message_box .smb_wrapper{
+
+width: 100%;
+
+max-width: 400px;
+
+background-color: white;
+
+border: 1px solid #00000042;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+}
+.warning_session_message_box .smb_wrapper .smb_top_bar{
+
+width: 100%;
+
+display: flex;
+
+justify-content: space-between;
+
+background-color: lightgrey;
+
+color: red;
+}
+.warning_session_message_box .smb_top_bar h5{
+
+padding: 3px 9px;
+
+margin: 0;
+}
+.warning_session_message_box .smb_top_bar button{
+
+width: 24px;
+
+background-color: red;
+
+border: unset;
+
+color: white;
+}
+
+.warning_session_message_box .smb_body{
+    padding: 9px;
+}
+
+.warning_session_message_box .smb_body p{
+
+text-align: justify;
+}
+.warning_session_message_box .smb_body button{
+    
+display: block;
+    
+margin: auto;
+    
+padding: 6px 9px;
+}
+/*----------------------- Exception Message --------------------------|
+|--------------------------------------------------------------------*/
+
+span.message,
+span.warning-message {
+    background-color: #f77b33;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 142px);
+    transition: 0.5s;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+    z-index: 1000000;
+}
+
+.slow-show {
+    transition: 0.5s !important;
+    opacity: 1 !important;
+}
+.Logo__imgBox.mj-logo{
+    width: 100%;
+    max-width: 400px;
+}
+
+.App__page {
+    overflow: hidden;
+}

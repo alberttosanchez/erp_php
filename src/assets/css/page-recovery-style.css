@@ -1,0 +1,24 @@
+/*----------------------- Exception Message --------------------------|
+|--------------------------------------------------------------------*/
+
+span.message,
+span.recovery-message {
+    width: 480px;
+    background-color: #33f764;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 240px);    
+    opacity: 0;
+    color: #ff023d;
+    font-weight: bold;
+    text-align: center;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.slow-show {
+    transition: 0.5s;
+    opacity: 1 !important;
+}

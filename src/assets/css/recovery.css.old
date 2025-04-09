@@ -1,0 +1,51 @@
+
+/*----------------------- Login Restore Component --------------------|
+|--------------------------------------------------------------------*/
+
+.LoginRecovery__title > h1
+{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.LoginRecovery__box
+{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.LoginRecovery__title
+{
+    margin: 20px 0;
+}
+
+form.LoginRecovery__body.LoginRecovery__form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label.LoginRecovery__formUserInput,
+label.LoginRecovery__formPassInput
+{
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.LoginRecovery__form > label > svg
+{
+    margin: 5px;
+    font-size: 20px;
+    color: cadetblue;
+}
+
+.LoginRecovery__footer
+{
+    text-align: center;
+    margin: 20px;
+}

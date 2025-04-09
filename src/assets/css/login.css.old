@@ -1,0 +1,114 @@
+.Main__page
+{
+    display: block;    
+}
+
+/*----------------------- Login Component ----------------------------|
+|--------------------------------------------------------------------*/
+.Login__wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.Login__box
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #d7edf7;
+    box-shadow: 1px 1px 5px black;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;    
+    margin: auto;
+    overflow: hidden;
+}
+
+.Login__header {
+    display: flex;
+    background-color: white;
+}
+
+.Logo__imgBox
+{
+
+width: 100%;
+}
+
+.Login__body,
+.Login__footer
+{
+    padding: 10px;
+}
+
+.Logo__imgBox.mj-logo > img,
+.Logo__imgBox.ijoven-logo > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Logo__imgBox.ijoven-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3E200;
+}
+
+.Logo__imgBox.mj-logo > img {
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.Login__container {
+    width: 100%;
+    max-width: 400px;
+    min-height: 286px;
+}
+
+.Login__title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.Login__title > h1 {
+    font-size: 1.5em;
+}
+.Login__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+label.Login__formUserInput,
+label.Login__formPassInput
+{
+    display: flex;
+    margin-bottom: .5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.Login__form > label > svg
+{
+    margin: 5px;
+    font-size: 20px;
+    color: cadetblue;
+}
+.Login__form > button
+{
+    margin: 20px 0 0 0;
+    display: block;
+}
+
+.Login__footer p {
+    text-align: center;
+}

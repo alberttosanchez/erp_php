@@ -1,0 +1,9 @@
+.newUsers__wrapper {
+    width: 100%;
+    max-width: 800px;
+}
+
+.newUsers_container > div > label {
+    width: calc(50% - 10px);
+    margin: 0 5px;
+}

@@ -1,0 +1,146 @@
+
+.settingUsers__gridData
+{
+    width: calc(100% - 40px);
+    height: 100%;
+    max-height: 200px;
+    overflow: auto;
+    border: 1px solid #9e9393;
+    padding: 10px;
+    margin: 0 20px 20px 20px;
+}
+
+table.table_container
+{
+    width: 100%;
+    margin: auto;
+}
+
+table.table_container > thead, table.table_container > tbody
+{
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;    
+}
+
+table.table_container > tbody > tr:hover
+{
+    background-color: rgb(202, 231, 75);
+}
+tbody > tr > td span > abbr > button
+{
+    border: 0;
+    background: none;
+    color: #403933;
+}
+tbody > tr > td span > abbr > button:hover
+{
+    color: red;
+}
+
+.settingUsers__wrapper > .table_index > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.settingUsers__wrapper > .table_index > ul > li {
+    float: left;    
+}
+
+.settingUsers__wrapper > .table_index > ul > li > a,
+.settingUsers__wrapper > .table_index > ul > li > span
+ {
+    padding: 5px 10px;
+    background: #ffdbdb;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.details__activationWrapper{
+    border: 1px solid #ff0303;
+    border-radius: 5px;
+    box-shadow: -1px 1px 3px #4c4949;
+    background-color: #ffff008f;
+}
+
+.activationWrap {
+    display: flex;
+    padding: 10px;
+}
+.activationWrap > p {
+    margin: unset;
+}
+
+.details_activartionButton{
+    background-color: unset;
+    padding: 0 0 0 10px;
+    border: unset;
+    margin: unset;
+    display: inline;
+    font-weight: bold;
+    color: #0400ff;
+    text-decoration: underline;
+    width: unset;
+    height: 0;
+}
+
+
+.settingUsers__details.form-group > h2 {
+    font-size: 1.2em;
+}
+
+.settingUsers__details > .details_container {
+    padding: 20px 0;
+}
+
+.settingUsers__details > .details_container label {
+    width: 100%;
+    max-width: 270px;
+    padding-right: 20px;
+}
+
+button.actionBtn {
+    position: relative;
+    z-index: 1;
+}
+span.spanActionBtn {
+    position: relative;
+    z-index: -1;
+}
+.mod_pagination,
+.pagination
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 266px;
+}
+.mod_pagination > button,
+.mod_pagination > li,
+.pagination > button,
+.pagination > li {
+    padding: 0 10px;
+}
+
+.mod_pagination > button,
+.pagination > button,
+.btn_pagination {    
+    background-color: #e0d6d6;
+    font-weight: bold;
+    border: unset;
+    border-radius: 3px;
+    padding: 3px 10px;
+}
+.mod_pagination > button:hover,
+.pagination > button:hover,
+.btn_pagination:hover{
+    background-color: #6b4747;;
+}
+.mod_pagination > button:focus,
+.pagination > button:focus,
+.btn_pagination:focus{
+    border: unset;
+    outline: unset;
+}

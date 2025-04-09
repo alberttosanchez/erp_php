@@ -1,0 +1,49 @@
+.modules_container table.modules_table {
+    display: inherit;
+    overflow-y: auto;
+    height: calc(100vh - 160px);
+}
+
+.modules__wrapper > .modules_pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.modules__wrapper > .modules_pagination > li > button {
+    border: unset;
+    margin: 0 5px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modules__wrapper > .modules_pagination > li > button.current,
+.modules__wrapper > .modules_pagination > li > button:hover {
+    color: white;
+    background-color: #597eaa;
+}
+
+.modules__wrapper > .modules_pagination > li > button.disabled,
+.modules__wrapper > .modules_pagination > li > button.disabled:hover {
+    cursor: no-drop;
+    background-color: unset;
+    color: unset;
+}
+
+.modules__wrapper .module_action_active button,
+.modules__wrapper .module_action_uninstall button{
+    border: unset;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.modules__wrapper .module_action_active button:hover,
+.modules__wrapper .module_action_uninstall button:hover{
+    text-decoration: underline;
+}

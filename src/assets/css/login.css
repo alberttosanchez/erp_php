@@ -1,0 +1,186 @@
+.Main__page
+{
+    display: block;    
+}
+
+/*----------------------- Login Component ----------------------------|
+|--------------------------------------------------------------------*/
+.Login__wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.Login__box
+{
+    display: flex;
+    padding: 20px 10px;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 1px 5px black;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 18px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Login__header {
+    display: flex;
+    background-color: white;
+}
+
+.Logo__imgBox
+{
+
+width: 100%;
+}
+
+.Login__body,
+.Login__footer
+{
+    padding: 10px;
+}
+
+.Logo__imgBox.mj-logo > img,
+.Logo__imgBox.ijoven-logo > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Logo__imgBox.ijoven-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3E200;
+}
+
+.Logo__imgBox.mj-logo > img {
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.Login__container {
+    width: 100%;
+    max-width: 400px;
+    min-height: 286px;
+}
+
+.Login__title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.Login__title > h1 {
+    font-size: 1.5em;
+}
+.Login__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+label.Login__formUserInput,
+label.Login__formPassInput
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+label.Login__formUserInput > span,
+label.Login__formPassInput > span
+{
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+}
+.Login__user_group_wrap {
+    display: flex;
+    width: 100%;
+    border: 1px solid #a3a3a3;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+}
+
+.Login__input {
+    border: unset;
+    outline: unset;
+}
+.Login__input:focus, .Login__input:active{
+    box-shadow: unset;
+    outline: unset;
+}
+.Login__form > label > svg
+{
+    margin: 5px;
+    font-size: 20px;
+    color: cadetblue;
+}
+.Login__form > button
+{
+    width: 100%;
+    border-radius: 18px;
+    margin: 20px 0 0 0;
+    display: block;
+}
+
+.Login__footer p {
+    text-align: left;
+}
+.Login__footer a{
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.Login__footer a:hover{
+    
+    color: black;
+}
+
+/**********************************
+/* Change Pasword
+**********************************/
+
+.LoginChangePassword__formUserInput {
+    max-width: 100% !important;
+}
+.LoginChangePassword__formUserInput input{
+    display: flex;
+    width: 100%;
+    border: 1px solid #a3a3a3;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+}
+
+.LoginChangePassword__footer p{
+    text-align: left;
+}
+.LoginChangePassword__footer a{
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.LoginChangePassword__footer a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.LoginChangePassword__form button[type="submit"]{
+    width: 100%;
+    border-radius: 24px;
+    padding: 10px;
+}

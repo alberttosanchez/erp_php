@@ -1,0 +1,126 @@
+/* app header style */
+.App__headerWrapper
+{
+    background-color: #38587f;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.App__headerWrapper .avatar_picture{
+    width: 50px;
+}
+
+.App__headerWrapper .avatar_picture > img {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+.App__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.App__title > span.large_title > h1,
+.App__title > span.short_title > h1
+{    
+    font-size: 0.8em;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding-left: 10px;
+    margin: 0;
+}
+.App__title > span.large_title,
+.App__title > span.short_title
+{
+    display: none;
+}
+@media screen and (max-width:768px)
+{ 
+    .App__title > span.short_title
+    {
+        display: initial;
+    }
+}
+@media screen and (min-width:769px)
+{
+    .App__title > span.large_title
+    {
+        display: initial;
+    } 
+}
+
+/* app body style */
+
+div#App__bodyWrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 24px);
+    overflow: hidden;
+}
+
+/* main menu style*/
+
+.App__menu {    
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.App__menu > .App__menuWrapper {
+    display: flex;    
+    padding: 0 20px;
+}
+.App__menu > .menu_wrapper > button.menu_button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    border: 0px;
+    background-color: #38587f;
+    align-items: center;
+}
+
+.App__menu > .menu_wrapper > button.menu_button:hover {
+    background-color: #4770a1;
+}
+.App__menu button.menu_button > span {
+    padding: 0 5px;
+    color: white;
+}
+
+.App__menu .menu_wrapper > .main_menu {
+    position: absolute;
+    background-color: #4770a1;
+    right: 0;
+    width: 30%;
+    z-index: 2;
+}
+
+.main_menu > ul > li {
+    padding: 10px;
+}
+
+.main_menu > ul > li:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.main_menu > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.main_menu > ul > li > a > span {
+    padding: 10px;
+}
+
+@media screen and (max-width:768px)
+{
+    .App__menu {
+        width: 50%;
+    }
+}

@@ -1,0 +1,17 @@
+<?php // agregue aqui las dependencias ?>
+    <?php /*
+    <!-- <link rel="stylesheet" href="<?=#"../" . CV_ASSETS_DIRECTORY . '/css/daterangepicker.css'; ?>" ></link>
+    <link rel="stylesheet" href="<?=#"../" . CV_ASSETS_DIRECTORY . '/css/style.css'; ?>" ></link>
+
+    <script src="<?=#"../" . CV_ASSETS_DIRECTORY . '/js/jquery-3.6.0.min.js';?>"></script>
+    <script src="<?=#"../" . CV_ASSETS_DIRECTORY . '/js/moment.min.js';?>"></script>
+    <script src="<?=#"../" . CV_ASSETS_DIRECTORY . '/js/daterangepicker.js';?>"></script>
+
+    <script src="<?=#'../' . CV_SCRIPTS_DIRECTORY . '/config.js'; ?>"></script>
+    <script src="<?=#'../' . CV_SCRIPTS_DIRECTORY . '/functions.js';?>"></script> --> */ ?>
+
+    <script src="<?=  '../' .  CV_ASSETS_DIRECTORY . '/js/zebra/JavaScriptFiles/BrowserPrint-3.0.216.min.js';?>"></script>
+
+   <script src="<?= '../' . CV_SCRIPTS_DIRECTORY . 'printer-part.js';?>"></script>
+
+    

@@ -1,0 +1,135 @@
+<!-- Modal -->
+
+<link rel="stylesheet" href="<?php echo CV_STYLES_DIRECTORY . "/edit-coworker-modal.css";?>">
+
+<div class="co_edit_coworker_modal_wrapper modal fade" id="co_edit_coworker_modal_wrapper" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="co_edit_coworker_modalLabel" aria-hidden="true">
+    <div class="co_edit_modal_group_wrapper modal-dialog">
+        <div class="co_edit_modal_content_box modal-content">
+
+            <div class="co_edit_modal_title_bar_box form-group">
+                <p><span class="co_title_bar">EDITAR COLABORADOR</span></p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="co_edit_modal_body_wrapper co_body_wrapper form-group">
+
+                <h4>Datos Personales</h4>
+
+                <div class="co_edit_modal_one_wrapper co_wrapper form-group">
+
+                    <div class="co_modal_one_box_group co_box_group form-group co_photo_wrapper">
+
+                        <div class="co_photo_container form-group">
+
+                            <?php include( CV_LIBRARY_COMPONENTS . "/PhotoBox/photo-box.php"); ?>
+
+                            <?php include( CV_LIBRARY_COMPONENTS . "/InputFileCropper/input-file-cropper.php"); ?>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group w-100">
+
+                        <div class="co_edit_modal_one_box_group co_box_group form-group">
+        
+                            <div class="co_edit_modal_name_box box form-group">
+                                <label for="co_edit_modal_name">Nombres</label>
+                                <input type="text" id="co_edit_modal_name" name="co_edit_modal_name" class="form-control" maxlength="100" />
+                            </div>
+            
+                            <div class="co_edit_modal_last_name_box box form-group">
+                                <label for="co_edit_modal_last_name">Apellidos</label>
+                                <input type="text" id="co_edit_modal_last_name" name="co_edit_modal_last_name" class="form-control" maxlength="100" />
+                            </div>
+        
+                        </div>
+        
+                        <div class="co_edit_modal_two_box_group co_box_group form-group">
+        
+                            <div class="co_edit_modal_gender_box box form-group">
+                                <label for="co_edit_modal_gender">Sexo</label>
+                                <select name="co_edit_modal_gender" id="co_edit_modal_gender" class="co_edit_modal_gender form-control" >
+                                    <option value="">-</option>
+                                </select>
+                            </div>
+        
+                            <div class="co_edit_modal_ident box form-group">
+                                <label for="co_edit_modal_ident">Código de Identidad</label>
+                                <input type="text" id="co_edit_modal_ident" name="co_edit_modal_ident" class="co_edit_modal_ident form-control" maxlength="100" />
+                            </div>
+        
+                            <div class="co_edit_modal_id_type_box box form-group">
+                                <label for="co_edit_modal_type_id">Tipo de Identificación</label>
+                                <select type="text" id="co_edit_modal_type_id" name="co_edit_modal_type_id" class="co_edit_modal_type_id form-control">
+                                    <option value="">-</option>
+                                </select>
+                            </div>
+        
+                            <div class="co_edit_modal_birth_date_box box form-group">
+                                <label for="co_edit_modal_birth_date">Fecha de Nacimiento</label>
+                                <input type="date" id="co_edit_modal_birth_date" name="co_edit_modal_birth_date" class="co_edit_modal_birth_date form-control" maxlength="100" />
+                            </div>
+        
+                            <input type="hidden" id="co_edit_modal_id" name="co_edit_modal_id" value="">
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <br>
+
+                <h4>Información Laboral</h4>
+
+                <div class="co_edit_modal_two_wrapper co_wrapper form-group">
+
+                    <div class="co_edit_modal_three_box_group co_box_group form-group">
+                        
+                        <div class="co_edit_modal_dpto_box box form-group">
+                            <label for="co_edit_modal_dpto">Departamento donde Labora</label>
+                            <select id="co_edit_modal_dpto" name="co_edit_modal_dpto" class="co_edit_modal_dpto form-control">
+                                <option value="">-</option>
+                                <option value="">DTIC</option>
+                                <option value="">Recepción</option>
+                                <option value="">Comunicaciones</option>
+                                <option value="">Becas</option>
+                            </select>
+                        </div>
+    
+                        <div class="co_edit_modal_job_title_box box form-group">
+                            <label for="co_edit_modal_job_title">Cargo</label>
+                            <input type="text" id="co_edit_modal_job_title" name="co_edit_modal_job_title" class="co_edit_modal_job_title form-control" maxlength="100" />
+                        </div>
+    
+                        <div class="co_edit_modal_phone_ext_box box form-group">
+                            <label for="co_edit_modal_phone_ext">Extensión Telefónica</label>
+                            <input type="text" id="co_edit_modal_phone_ext" name="co_edit_modal_phone_ext" class="co_edit_modal_phone_ext form-control" maxlength="100" />
+                        </div>
+
+                    </div>
+                    
+                    <div class="co_edit_modal_four_box_group co_box_group form-group">
+
+                        <div class="co_edit_modal_email_box box form-group">
+                            <label for="co_edit_modal_email">Correo Institucional</label>
+                            <input type="text" id="co_edit_modal_email" name="co_edit_modal_email" class="co_edit_modal_email form-control" maxlength="100" />
+                        </div>
+
+                        <div class="co_edit_modal_register_btn_box box form-group">                            
+                            <span class="no-show co_edit_modal_message"><small>Datos Actualizados</small></span>
+                            <buton type="button" id="co_edit_modal_register_btn" name="co_edit_modal_register_btn" class="co_edit_modal_register_btn btn btn-success">ACTUALIZAR</buton>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="<?php echo CV_SCRIPTS_DIRECTORY;?>/edit-coworker-modal.js"></script>

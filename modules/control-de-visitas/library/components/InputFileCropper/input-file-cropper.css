@@ -1,0 +1,45 @@
+.no-show{
+    display: none;
+}
+
+.label_file_cropper_button {
+    background-color: #00a1ff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;    
+    align-items: center;
+}
+.label_file_cropper_button:hover{    
+    cursor: pointer;
+}
+
+.label_file_cropper_button .text {
+    text-align: center;
+    width: 100%;
+}
+.label_file_cropper_button .text:hover{
+    opacity: 0.8;
+    color:yellow;
+}
+
+.label_file_cropper_container {
+    display: flex;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.label_file_cropper_container button.close-icon {
+    background-color: red;
+    width: 32px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    color: white;
+}
+.label_file_cropper_container button.close-icon:hover{
+    opacity: 0.8;
+}

@@ -1,0 +1,60 @@
+.no-display
+{
+    display: none;
+}
+.modulesInstall__wrapper{
+
+}
+.modulesInstall__wrapper > form.modulesInstall_details{
+}
+.modulesInstall__wrapper > form > h2{
+    
+}
+.modulesInstall__wrapper > form > label.moduleInstall_zip_label{
+    display: block;
+    background-color: #597eaa;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;       
+}
+.modulesInstall__wrapper > form > label.moduleInstall_zip_label:hover{
+    background-color: rgba(89, 126, 170,.8);
+}
+.modulesInstall__wrapper .modulesInstall_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.modulesInstall__wrapper .modulesInstall_container > .progress {
+    width: 100%;
+    max-width: 500px;
+}
+
+.ProgressConsole{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background-color: rgb(219, 237, 245);
+    height: 100px;        
+    border-radius: 5px;
+    border: 1px solid rgb(145, 146, 146);
+    padding: 10px;
+    font-family: "consolas", Helvetica, sans-serif;
+    font-size: 10px;
+    overflow-y: auto;
+    color: rgb(34, 34, 34);
+}
+.ProgressConsole > p{
+    margin: 0;
+}
+
+label.moduleInstall_zip_label.label_disabled {
+    background-color: #afafaf !important;
+    cursor: no-drop !important;
+}

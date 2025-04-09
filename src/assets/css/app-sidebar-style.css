@@ -1,0 +1,19 @@
+/* top_sidebar_wrap */
+
+.top_sidebar_wrap{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px 10px 0px 10px;
+    align-items: center;
+}
+
+.top_sidebar_wrap > .expand_or_close_button{
+    padding: 0px 10px;
+    font-size: 27px;
+    border: unset;
+    background-color: unset;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+}

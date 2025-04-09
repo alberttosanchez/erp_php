@@ -1,0 +1,94 @@
+.co_fnall_modal_group_wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+.co_fnall_modal_content_box {
+    border-radius: unset;
+}
+.co_fnall_modal_title_bar_box{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;        
+    background-color: red;
+    align-items: center;
+    color: white;
+}
+.co_fnall_modal_title_bar_box p{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;        
+}
+.co_fnall_modal_body_wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.co_fnall_modal_one_box_group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.co_fnall_modal_one_box_group > div {
+    width: 100%;
+    max-width: calc(50% - 5px);
+}
+.co_fnall_modal_two_box_group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.co_fnall_modal_two_box_group > div {
+    width: 100%;
+    max-width: calc(25% - 5px);
+}
+.co_fnall_modal_three_box_group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}   
+.co_fnall_modal_three_box_group > div {
+    width: 100%;
+    max-width: calc(33.33% - 5px);
+}
+.co_fnall_modal_three_box_group > div:nth-child(1),
+.co_fnall_modal_three_box_group > div:nth-child(2) {        
+    width: 100%;
+    max-width: calc(40% - 5px);
+}  
+.co_fnall_modal_three_box_group > div:nth-child(3){
+    width: 100%;
+    max-width: calc(20% - 5px);
+}
+.co_fnall_modal_four_box_group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.co_fnall_modal_four_box_group > div:nth-child(1) {
+    width: 100%;
+    max-width: calc(60% - 5px);
+}
+.co_fnall_modal_four_box_group > div:nth-child(2) {
+    display: flex;
+    max-width: calc(20% - 5px);
+    align-items: end;
+}
+.co_fnall_modal_two_box.box {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+@media screen and (max-width:769px){
+    .co_fnall_modal_one_box_group > div,
+    .co_fnall_modal_two_box_group > div,
+    .co_fnall_modal_three_box_group > div,
+    .co_fnall_modal_four_box_group > div {
+        max-width: 100% !important;
+    }
+    .co_fnall_modal_four_box_group > div:nth-child(2) {            
+        width: 100%;            
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

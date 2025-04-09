@@ -1,0 +1,89 @@
+
+/*----------------------- Login Restore Component --------------------|
+|--------------------------------------------------------------------*/
+
+.LoginRecovery__title > h1
+{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.LoginRecovery__box
+{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.LoginRecovery__title
+{
+    margin: 20px 0;
+}
+
+form.LoginRecovery__body.LoginRecovery__form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label.LoginRecovery__formUserInput,
+label.LoginRecovery__formPassInput
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+label.LoginRecovery__formUserInput > span,
+label.LoginRecovery__formUserInput > span
+{
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+}
+.LoginRecovery__user_group_wrap {
+    display: flex;
+    width: 100%;
+    border: 1px solid #a3a3a3;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+}
+
+.LoginRestore__email {
+    border: unset;    
+}
+.LoginRestore__email:focus {
+    box-shadow: unset;
+}
+
+.LoginRecovery_button {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.LoginRecovery__form > label > svg
+{
+    margin: 5px;
+    font-size: 20px;
+    color: cadetblue;
+}
+
+.LoginRecovery__footer
+{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.LoginRecovery__footer a{
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.LoginRecovery__footer a:hover{    
+    color: black;
+}

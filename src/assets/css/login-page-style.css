@@ -1,0 +1,29 @@
+/*----------------------- Exception Message --------------------------|
+|--------------------------------------------------------------------*/
+
+span.message,
+span.warning-message {
+    background-color: #f77b33;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 142px);
+    transition: 0.5s;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.slow-show {
+    transition: 0.5s !important;
+    opacity: 1 !important;
+}
+.Logo__imgBox.mj-logo{
+    width: 100%;
+    max-width: 400px;
+}
+
+.loading.show{
+    opacity: 1 !important;
+}

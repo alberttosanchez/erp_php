@@ -1,0 +1,79 @@
+.cv_plant_distribution_content label {
+    font-size: 12px;
+    font-weight: bold;
+}
+.pt_dist_one_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.pt_dist_one_wrapper > div{
+    width: 100%;
+    max-width: calc(50% - 5px);
+}
+.pt_dist_search_box{
+    display: flex;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.pt_dist_search_box > .pt_dist_search_input{
+    border: unset;
+}
+.pt_dist_search_box > .pt_dist_search_btn{
+    border: unset;
+    padding: 0 10px;
+}
+.pt_dist_table_box {
+    border: 1px solid #dbdbdb;
+    height: 300px;
+    overflow: scroll;
+}
+.pt_dist_table > tbody > tr:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+.pt_dist_table > tbody > tr > td > button {
+    border: unset;
+    background-color: unset;
+}
+.pt_dist_table > tbody > tr > td > button:hover {
+    color: red;
+}
+.pt_dist_box_group {
+    display: flex;
+    justify-content: space-between;
+}
+.pt_dist_box_group > div{
+    width: 100%;
+    max-width: calc(20% - 5px);
+}
+.pt_dist_box_group > div:nth-child(1){        
+    max-width: calc(60% - 5px);
+}
+.pt_dist_add_btn_box {
+    margin-top: 10px;
+}
+.pt_dist_add_message {
+    font-weight: bold;
+}
+.pt_dist_add_message.added {
+    color: green;
+}
+.pt_dist_add_message.failed {
+    color: red;
+}
+@media screen and (max-width: 769px){
+    .pt_dist_one_wrapper {
+        flex-direction: column;
+    }
+    .pt_dist_one_wrapper > div {            
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .pt_dist_box_group {
+        flex-direction: column;
+    }
+    .pt_dist_box_group > div {
+        max-width: 100% !important;
+    }
+}

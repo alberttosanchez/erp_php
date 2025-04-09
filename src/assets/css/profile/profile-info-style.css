@@ -1,0 +1,13 @@
+.settingUsers__profile.form-group > h2 {
+    font-size: 1.2em;
+}
+
+.settingUsers__profile > .profile_container {
+    padding: 20px 0;
+}
+
+.settingUsers__profile > .profile_container label {
+    width: 100%;
+    max-width: 270px;
+    padding-right: 20px;
+}

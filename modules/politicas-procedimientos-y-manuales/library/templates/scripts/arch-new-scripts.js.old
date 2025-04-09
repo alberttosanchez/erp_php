@@ -1,0 +1,188 @@
+let files_object = [];
+
+const drop_zone_label = document.getElementById("drop_zone_label");
+
+drop_zone_label.addEventListener( 'mousedown', (ev)=> {                            
+    drop_zone_label.setAttribute('style','cursor:grabbing');
+});
+
+drop_zone_label.addEventListener('mouseup', (ev)=> {                            
+    drop_zone_label.setAttribute('style','cursor:grab');
+});  
+
+// se activa cuando esta encima de la zona valida
+drop_zone_label.addEventListener('dragover', (ev)=> {                            
+    console.log('File(s) in drop zone');                           
+    ev.preventDefault();                                
+    ev.target.parentElement.classList.add('over');                                
+});
+// se activa cuando se sale de la zona valida
+drop_zone_label.addEventListener("dragleave", (ev) => {
+    ev.preventDefault();  
+    ev.target.parentElement.classList.remove('over');   
+});
+
+let input_files = document.getElementById("drop_zone");
+// se activa cuando se suelta el archivo encima de la zona
+input_files.addEventListener('change', (ev)=> {                                 
+    handleDrop(ev);
+});
+
+// se activa cuando se suelta el archivo encima de la zona
+drop_zone_label.addEventListener('drop', (ev)=> {
+    handleDrop(ev);
+});
+
+removeDragData = (ev) => {
+    console.log('Removing drag data')
+
+    if (typeof ev.dataTransfer != 'undefined' && ev.dataTransfer.items) {
+        // Use DataTransferItemList interface to remove the drag data
+        ev.dataTransfer.items.clear();
+    } else {
+        // Use DataTransfer interface to remove the drag data
+        ev.target.value = "";
+    }
+}
+
+renderFilesList = () => {
+    
+    const arch_new_file_table = document.querySelector("table.arch_new_file_table");
+    const arch_new_file_table_body = document.querySelector("table.arch_new_file_table tbody");
+    
+
+    let tr = "";
+
+    if ( files_object.length > 0 )
+    {
+        for (const key in files_object) {
+        
+            tr += `<tr key="${(parseInt(key)+1)}">`;
+            tr +=   `<td>${(parseInt(key)+1)}</td>`;
+            tr +=   `<td>${files_object[key]['name']}</td>`;
+            tr +=   `<td class="td_actions">`;
+                tr +=   `<ul class="unstyled-list">`;
+                    tr +=   `<li key="${(parseInt(key)+1)}"><span class="close_icon" style="color:red;font-weight:bold;cursor:pointer;"><i class="fas fa-times"></i> Quitar</span></li>`;                    
+                tr +=   `</ul>`;
+            tr +=   `</td>`;
+            tr += `</tr>`;
+        }    
+        
+    }
+    
+    arch_new_file_table_body.innerHTML = tr;
+
+    if ( arch_new_file_table.className.indexOf("no-show") > -1 )
+    {
+        arch_new_file_table.classList.toggle('no-show');
+    }
+
+    // agregamos el evento click para disparar la funcion removeFileByKey
+    setTimeout(() => {
+        let td_actions = document.querySelectorAll('.td_actions li');
+
+        td_actions.forEach( item => {
+            item.addEventListener('click', (ev) =>{
+                let key = ev.target.parentElement.attributes['key'].value;
+                removeFileByKey((key-1));
+            });            
+        });
+    }, 100);
+
+}
+
+handleDrop = (ev) =>{
+
+    console.log('File(s) dropped');                               
+    ev.preventDefault();
+    ev.target.parentElement.classList.remove('over');         
+
+    //console.log(ev);
+    
+    if (
+        typeof ev.dataTransfer != 'undefined' &&
+        ev.dataTransfer.items
+        ) {
+
+        // Use DataTransferItemList interface to access the file(s)
+        for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+
+            // If dropped items aren't files, reject them
+            if (ev.dataTransfer.items[i].kind === 'file') {
+
+                if (files_object.length == 0)
+                {
+                    files_object[i] = ev.dataTransfer.items[i].getAsFile();                    
+                }
+                else
+                {
+                    let  found = false;
+                    files_object.forEach( item => {
+                        let file = ev.dataTransfer.items[i].getAsFile();
+                        // si el nombre no esta en el objeto introduce el item en el objeto  
+                        if ( item.name == file.name )
+                        {
+                            found = true;                            
+                        }
+                    });
+                    // si no lo encuentra agregalo
+                    if ( ! found ){
+                        files_object[files_object.length] = ev.dataTransfer.items[i].getAsFile();
+                    }
+                }
+
+            }
+
+        }
+
+    } else {
+
+        // Use DataTransfer interface to access the file(s)
+        for (var i = 0; i < ev.target.files.length; i++) {
+                        
+            if (files_object.length == 0)
+            {
+                files_object[i] = ev.target.files[i];                
+            }
+            else 
+            {
+                let  found = false;
+                files_object.forEach( item => {
+                    // si el nombre no esta en el objeto introduce el item en el objeto                    
+                    if ( item.name == ev.target.files[i].name )
+                    {
+                        found= true;
+                    }
+                });
+                // si no lo encuentra agregalo
+                if ( ! found ){                    
+                    files_object[files_object.length] = ev.target.files[i];
+                }
+            }
+
+        }
+
+    }
+
+    console.log(files_object);
+    
+    renderFilesList();
+
+    setTimeout(() => {
+        removeDragData(ev);                        
+    }, 500);
+}
+
+removeFileByKey = (key) =>{
+    console.log('key: ',key);
+
+    //let arch_new_file_trows = document.querySelectorAll('#arch_new_file_table tbody tr');
+
+    console.log(files_object);
+    files_object.splice(key,1);
+
+    setTimeout(() => {
+        renderFilesList();        
+    }, 100);
+    
+}

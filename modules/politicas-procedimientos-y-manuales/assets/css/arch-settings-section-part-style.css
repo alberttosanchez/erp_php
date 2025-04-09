@@ -1,0 +1,88 @@
+
+.check_element_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+span.swite_btn {
+    display: block;
+    width: 39px;
+    height: 21px;
+    border: 2px solid #a1a1a5;
+    border-radius: 12px;
+    position: relative;
+    background-color: #e1d7d7;
+    cursor: pointer;
+}
+
+.blue_btn{
+    border-color: #4762f8 !important;
+    background-color: #4762f887 !important;
+}
+.blue_btn::after{
+    border-color: #4762f8 !important;
+    background-color: #4762f887 !important;
+}
+
+span.swite_btn::after {
+    content: " ";
+    width: 18px;
+    height: 18px;
+    background-color: #616478;
+    border: 1px solid #9b9b86;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;                        
+    transition: 0.3s;
+}
+span.swite_btn.selected {                        
+    border: 2px solid #7cbf48;
+    background-color: #aadba0;
+}
+span.swite_btn.selected::after {                                                
+    background-color: #47993c;
+    border: 1px solid #d7d75b; 
+    left: unset;                                             
+    right: 0 !important;
+    transition: 0.3s;
+}
+
+
+.printer_option_settings,
+.upload_option_settings,
+.download_option_settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload_slug_tags_container,
+.slug_tags_container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.upload_slug_tags_container .upload_slug_tag_text,
+.upload_files_extensions_container .upload_file_extensions_text,
+.slug_tags_container .slug_tag_text,
+.files_extensions_container .file_extensions_text
+{
+    display: block;
+    padding: 5px;
+    background-color: #3d567d;
+    color: white;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.upload_slug_tags_container .upload_slug_tags_button,
+.upload_files_extensions_container .upload_file_extensions_button,
+.slug_tags_container .slug_tags_button,
+.files_extensions_container .file_extensions_button
+{
+    background: unset;
+    color: #f6ff42;
+    outline: unset;
+    border: unset;
+}
