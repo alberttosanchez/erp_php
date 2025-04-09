@@ -1,4 +1,4 @@
-# IJOVEN V1.0
+# ERP V2.2.2
 ### (Intranet Juventud del Miniterio de la Juventud, basado en SIGPROMJ V2.2)
 
 El presente proyecto es un sistema creado para administrar modulos para ser usados en este sistema de gestión.
