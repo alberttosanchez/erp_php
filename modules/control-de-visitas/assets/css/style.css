@@ -1,8 +1,0 @@
-.cv_main{
-    overflow: auto;
-}
-
-.btn_disabled {
-    background-color: lightgrey !important;
-    cursor: no-drop;
-}
